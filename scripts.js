@@ -1,3 +1,10 @@
+let pratoSelecionado = null;
+let precoPrato = 0;
+let bebidaSelecionada = null;
+let precoBebida = 0;
+let sobremesaSelecionada = null;
+let precoSobremesa = 0;
+let precoTotal = 0;
 
 function selecionarPrato(prato) {
     console.log(prato);
@@ -9,6 +16,11 @@ function selecionarPrato(prato) {
     }
 
     prato.classList.add("borda-verde");
+
+    pratoSelecionado = prato.querySelector("div .nome-item").innerHTML;
+    precoPrato = prato.querySelector("div .preço strong").innerHTML;
+    precoPrato = parseFloat(precoPrato.replace("," , "."));
+
     fecharPedido();
 }
 
@@ -22,6 +34,11 @@ function selecionarBebida(bebida) {
     }
 
     bebida.classList.add("borda-verde");
+
+    bebidaSelecionada = bebida.querySelector("div .nome-item").innerHTML;
+    precoBebida = bebida.querySelector("div .preço strong").innerHTML;
+    precoBebida = parseFloat(precoBebida.replace("," , "."));
+
     fecharPedido();
 }
 
@@ -35,6 +52,11 @@ function selecionarSobremesa(sobremesa) {
     }
 
     sobremesa.classList.add("borda-verde");
+
+    sobremesaSelecionada = sobremesa.querySelector("div .nome-item").innerHTML;
+    precoSobremesa = sobremesa.querySelector("div .preço strong").innerHTML;
+    precoSobremesa = parseFloat(precoSobremesa.replace("," , "."));
+    
 
     fecharPedido();
 }
@@ -53,31 +75,23 @@ function fecharPedido() {
         botaoPedidoLiberado.classList.add("aparecer");
                
     }    
+
 }
 
 function finalizarPedido() {
     const nomeCliente = prompt("Qual o seu nome?");
     const enderecoCliente = prompt("Qual o seu endereço?");
-    const mensagem = "Olá, gostaria de fazer o pedido:
-    - Prato: ${pedido.prato}
-    - Bebida: ${pedido.bebida}
-    - Sobremesa: ${pedido.sobremesa}
-    Total: R$ ${pedido.total}
+
+    precoTotal = precoPrato + precoBebida + precoSobremesa;
+   
+    let mensagem =   `Olá gostaria de fazer o pedido:\
+         \r\t- Prato: ${pratoSelecionado}\
+        \r\t- Bebida: ${bebidaSelecionada}\
+        \r\t- Sobremesa: ${sobremesaSelecionada}\
+        \rTotal: R$ ${precoTotal.toFixed(2)}\
+        \n\rNome: ${nomeCliente}\
+        \rEndereço: ${enderecoCliente}`;
     
-    Nome: ${nomeCliente}
-    Endereço: ${enderecoCliente}"";
-
+    const mensagemCodificada = window.encodeURIComponent(mensagem);
+    window.open(`https://wa.me/5531973434846/?text=` + mensagemCodificada, "_blank")
 }
-
-function convesaWhatsApp() {
-
-
-    
-    const enderecoSite = encodeURIComponent(mensagem);
-
-    const whatsapp = `https://wa.me/5553111111111?text=${pedidoZap}`;
-    window.open(whatsapp, "_blank")
-    window.location.reload();
-}
-
-window.location.href = "https://wa.me/5531973434846";
