@@ -102,7 +102,7 @@ img {
     align-items: center;
 }
 
-.botão-fechar-cinza {
+.botao-cinza {
     width: 360px;
     height: 61px;
     border-radius: 50px;
@@ -125,21 +125,24 @@ img {
     box-shadow: 0px 0px 0px 5px #32B72F;
 }
 
-.botão-fechar-verde {
+.botao-verde {
     width: 360px;
     height: 61px;
     border-radius: 50px;
-    background-color: #32B72F;
+    background: #32B72F;
     border: none;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    text-align: center;
-    overflow-wrap: break-word;
-    padding-left: 50px;
-    padding-right: 50px;
-
     font-size: 20px;
     color: #FFFFFF;
     font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.esconder {
+    display: none;
+}
+
+.aparecer {
+    display: initial;
 }
