@@ -13,9 +13,11 @@ function selecionarPrato(prato) {
     const botaoSelecionado = document.querySelector(".borda-verde");
     if (botaoSelecionado !== null) {
         botaoSelecionado.classList.remove("borda-verde");
+        botaoSelecionado.querySelector("ion-icon").classList.add("esconder");
     }
 
     prato.classList.add("borda-verde");
+    prato.querySelector("ion-icon").classList.remove("esconder");
 
     pratoSelecionado = prato.querySelector("div .nome-item").innerHTML;
     precoPrato = prato.querySelector("div .preço strong").innerHTML;
@@ -31,9 +33,11 @@ function selecionarBebida(bebida) {
     const botaoSelecionado = document.querySelector(".bebidas").querySelector(".borda-verde");
     if (botaoSelecionado !== null) {
         botaoSelecionado.classList.remove("borda-verde");
+        botaoSelecionado.querySelector("ion-icon").classList.add("esconder");
     }
 
     bebida.classList.add("borda-verde");
+    bebida.querySelector("ion-icon").classList.remove("esconder");
 
     bebidaSelecionada = bebida.querySelector("div .nome-item").innerHTML;
     precoBebida = bebida.querySelector("div .preço strong").innerHTML;
@@ -49,9 +53,11 @@ function selecionarSobremesa(sobremesa) {
     const botaoSelecionado = document.querySelector(".sobremesas").querySelector(".borda-verde");
     if (botaoSelecionado !== null) {
         botaoSelecionado.classList.remove("borda-verde");
+        botaoSelecionado.querySelector("ion-icon").classList.add("esconder");
     }
 
     sobremesa.classList.add("borda-verde");
+    sobremesa.querySelector("ion-icon").classList.remove("esconder");
 
     sobremesaSelecionada = sobremesa.querySelector("div .nome-item").innerHTML;
     precoSobremesa = sobremesa.querySelector("div .preço strong").innerHTML;
@@ -84,7 +90,7 @@ function finalizarPedido() {
 
     precoTotal = precoPrato + precoBebida + precoSobremesa;
    
-    let mensagem =   `Olá gostaria de fazer o pedido:\
+    let mensagem =   `Olá, gostaria de fazer o pedido:\
          \r\t- Prato: ${pratoSelecionado}\
         \r\t- Bebida: ${bebidaSelecionada}\
         \r\t- Sobremesa: ${sobremesaSelecionada}\
