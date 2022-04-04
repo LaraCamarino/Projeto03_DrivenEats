@@ -16,7 +16,7 @@
 
 </head>
 <body>
-    <div class="topo">
+    <div class="topo"> 
         <h1>DrivenEats</h1>
         <p>Sua comida em 6 minutos</p>
     </div>
@@ -25,26 +25,26 @@
 
         <div class="categoria">
             <h2>Primeiro, seu prato</h2>
-            <div class="barra-itens">
-                <div class="caixa-item" onclick="">
+            <div class="barra-itens pratos">
+                <div class="caixa-item" onclick="selecionarPrato(this)"> 
                     <img src="/Imagens/prato.jpg">
                     <p class="nome-item">Frango Yin Yang Pequeno</p>
                     <p class="descrição">Um pouco de batata, um pouco de salada</p>
                     <p class="preço">R$ 14,90</p>
                 </div>
-                <div class="caixa-item" onclick="">
+                <div class="caixa-item" onclick="selecionarPrato(this)">
                     <img src="/Imagens/prato.jpg">
                     <p class="nome-item">Frango Yin Yang Médio</p>
                     <p class="descrição">Um pouco de batata, um pouco de salada</p>
                     <p class="preço">R$ 19,90</p>
                 </div>
-                <div class="caixa-item" onclick="">
+                <div class="caixa-item" onclick="selecionarPrato(this)">
                     <img src="/Imagens/prato.jpg">
                     <p class="nome-item">Frango Yin Yang Grande</p>
                     <p class="descrição">Um pouco de batata, um pouco de salada</p>
                     <p class="preço">R$ 24,90</p>
                 </div>
-                <div class="caixa-item" onclick="">
+                <div class="caixa-item" onclick="selecionarPrato(this)">
                     <img src="/Imagens/prato.jpg">
                     <p class="nome-item">Frango Yin Yang Gigante</p>
                     <p class="descrição">Um pouco de batata, um pouco de salada</p>
@@ -56,26 +56,26 @@
 
         <div class="categoria">
             <h2>Agora, sua bebida</h2>
-            <div class="barra-itens">
-                <div class="caixa-item" onclick="">
+            <div class="barra-itens bebidas">
+                <div class="caixa-item" onclick="selecionarBebida(this)">
                     <img src="/Imagens/bebida.jpg">
                     <p class="nome-item">Coquinha gelada</p>
                     <p class="descrição">Lata 350ml</p>
                     <p class="preço">R$ 4,90</p>
                 </div>
-                <div class="caixa-item" onclick="">
+                <div class="caixa-item" onclick="selecionarBebida(this)">
                     <img src="/Imagens/bebida.jpg">
                     <p class="nome-item">Coquinha gelada</p>
                     <p class="descrição">Garrafa 600ml</p>
                     <p class="preço">R$ 6,90</p>
                 </div>
-                <div class="caixa-item" onclick="">
+                <div class="caixa-item" onclick="selecionarBebida(this)">
                     <img src="/Imagens/bebida.jpg">
                     <p class="nome-item">Coquinha gelada</p>
                     <p class="descrição">Garrafa 1,5 litros</p>
                     <p class="preço">R$ 10,90</p>
                 </div>
-                <div class="caixa-item" onclick="">
+                <div class="caixa-item" onclick="selecionarBebida(this)">
                     <img src="/Imagens/bebida.jpg">
                     <p class="nome-item">Coquinha gelada</p>
                     <p class="descrição">Garrafa 3 litros</p>
@@ -87,26 +87,26 @@
 
         <div class="categoria">
             <h2>Por fim, sua sobremesa</h2>
-            <div class="barra-itens">
-                <div class="caixa-item" onclick="">
+            <div class="barra-itens sobremesas">
+                <div class="caixa-item" onclick="selecionarSobremesa(this)">
                     <img src="/Imagens/sobremesa.webp">
                     <p class="nome-item">Pudim</p>
                     <p class="descrição">Um pedaço de pudim</p>
                     <p class="preço">R$ 7,90</p>
                 </div>
-                <div class="caixa-item" onclick="">
+                <div class="caixa-item" onclick="selecionarSobremesa(this)">
                     <img src="/Imagens/sobremesa.webp">
                     <p class="nome-item">Pudim</p>
                     <p class="descrição">1/4 de pudim</p>
                     <p class="preço">R$ 14,90</p>
                 </div>
-                <div class="caixa-item" onclick="">
+                <div class="caixa-item" onclick="selecionarSobremesa(this)">
                     <img src="/Imagens/sobremesa.webp">
                     <p class="nome-item">Pudim</p>
                     <p class="descrição">1/2 de pudim</p>
                     <p class="preço">R$ 19,90</p>
                 </div>
-                <div class="caixa-item" onclick="">
+                <div class="caixa-item" onclick="selecionarSobremesa(this)">
                     <img src="/Imagens/sobremesa.webp">
                     <p class="nome-item">Pudim</p>
                     <p class="descrição">Pudim inteiro</p>
@@ -120,7 +120,7 @@
 
     <div class="base">
         <div>
-            <button class="botão" onclick="">Selecione os 3 itens para fechar o pedido</button>
+            <button class="botão-fechar-cinza" onclick="fecharPedido('')">Selecione os 3 itens para fechar o pedido</button>
         </div>
     
     </div>    
